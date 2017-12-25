@@ -3,10 +3,10 @@ import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 
 class CropRobloxImage extends Component {
-  render() {
+  componentDidMount() {
     var img = new Image(),
-    $canvas = $("<canvas>"),
-    canvas = $canvas[0],
+    mainCanvas = $("<canvas>"),
+    canvas = mainCanvas[0],
     context;
     
     var removeBlanks = function (imgWidth, imgHeight) {
@@ -49,37 +49,41 @@ class CropRobloxImage extends Component {
             return null; 
         };
     
-    var cropTop = scanY(true),
-        cropBottom = scanY(false),
-        cropLeft = scanX(true),
-        cropRight = scanX(false),
-        cropWidth = cropRight - cropLeft,
-        cropHeight = cropBottom - cropTop;
-    
-    var $croppedCanvas = $("<canvas>").attr({ width: cropWidth, height: cropHeight });
-    $croppedCanvas[0].getContext("2d").drawImage(canvas,
-        cropLeft, cropTop, cropWidth, cropHeight,
-        0, 0, cropWidth, cropHeight);
-    
-    $(".rbxImage").append($croppedCanvas);
-    };
-    
-    img.crossOrigin = "anonymous";
-    img.onload = function () {
-    $canvas.attr({ width: this.width, height: this.height });
-    context = canvas.getContext("2d");
-    if (context) {
-        context.drawImage(this, 0, 0);
-        removeBlanks(this.width, this.height);
-    } else {
-        alert('Get a real browser!');
+      var cropTop = scanY(true),
+          cropBottom = scanY(false),
+          cropLeft = scanX(true),
+          cropRight = scanX(false),
+          cropWidth = cropRight - cropLeft,
+          cropHeight = cropBottom - cropTop;
+      
+      var croppedCanvas = $("<canvas>").attr({ width: cropWidth, height: cropHeight });
+      croppedCanvas[0].getContext("2d").drawImage(canvas,
+          cropLeft, cropTop, cropWidth, cropHeight,
+          0, 0, cropWidth, cropHeight);
+      
+
+      var convertedImage = new Image;
+      convertedImage.src = croppedCanvas[0].toDataURL("image/png");
+      var dsshh = document.getElementById('rbxImage');
+      dsshh.appendChild(convertedImage);
+      };
+      
+      img.crossOrigin = "anonymous";
+      img.onload = function () {
+      mainCanvas.attr({ width: this.width, height: this.height });
+      context = canvas.getContext("2d");
+      if (context) {
+          context.drawImage(this, 0, 0);
+          removeBlanks(this.width, this.height);
+      } else {
+          alert('Get a real browser!');
+      }
     }
-    }
-    
-    // define here an image from your domain
     img.src = 'https://t3.rbxcdn.com/60561ec5367320937b1ec7121183f669';
+  }
+  render() {
     return(
-      <div className="rbxImage">
+      <div id="rbxImage">
 
       </div>
     )
@@ -100,7 +104,6 @@ class IndividualListing extends Component {
           <div>
             <div className="listingImageContainer">
               <CropRobloxImage/>
-              {/* <img src="https://t2.rbxcdn.com/859236863329da321320019e08d2d338"/> */}
             </div>
             <div className="listingBidsPriceContainer">
                 <div className="priceAndTimeContainer">
