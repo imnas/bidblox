@@ -9,7 +9,7 @@ class Footer extends Component {
         <div className="footerSubContainer">
           <div className="footerLeft">
             <ul>
-              <NavLink to="/"><img src="/media/bidblox.png"/></NavLink>
+              <NavLink to="/"><img src="/media/bidblox.svg"/></NavLink>
               <p>&copy; BidBlox . All rights reserved</p>
             </ul>
           </div>

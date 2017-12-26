@@ -99,7 +99,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  font-size: 16px;
+  font-size: 17px;
 }
 .userNameNavContainer i {
   margin-left: 5px;
@@ -126,7 +126,7 @@ body {
 .listingsContainer::after {
   content: "";
   background: url(media/ps.svg);
-  opacity: 0.04;
+  opacity: 0.02;
   top: 0;
   left: 0;
   bottom: 0;
@@ -134,10 +134,10 @@ body {
   position: absolute;
   z-index: 1;
   background-position: center center;
-  background-size: 300px;
+  background-size: 700px;
 }
 .actualContainer {
-  /* max-width: 1200px; */
+  max-width: 1200px;
   width:100%;
   margin: 0 auto;
   position:Relative;
@@ -243,6 +243,81 @@ body {
   right: 25px;
   font-size: 22px;
 }
+.profileDrop {
+  position: absolute;
+  top: 75px;
+  color: #061649;
+  width: 200px;
+  background: #fff;
+  right: 0px;
+  box-shadow: 0px 0px 30px -8px #d2dde8;
+  border-radius: 8px;
+}
+.accountBalanceContainer b {
+  padding-left: 5px;
+}
+.accountBalanceContainer {
+  background: #0096f8;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 25px;
+  height: 42px;
+  padding-left: 25px;
+  padding-right: 25px;
+  font-weight: 600;
+  border-radius: 8px;
+  font-size: 17px;
+  border: 4px solid #3cb2ff;
+}
+.accountBalanceContainer a {
+  border: 2px solid;
+  border-radius: 100%;
+  width: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20px;
+  margin-left: 10px;
+  font-size: 13px;
+}
+.profileDrop:after {
+  content: '';
+  position: absolute;
+  bottom: 99%;
+  width: 0;
+  height: 0;
+  border-left: 7.5px solid transparent;
+  border-right: 7.5px solid transparent;
+  border-bottom: 7.5px solid #ffffff;
+  clear: both;
+  display: block;
+  right: 5px;
+}
+.profileDrop a.active {
+  color: #3cb2ff;
+}
+.profileDrop a p {
+  font-size: 14px;
+}
+.profileDrop a h4 {
+  font-size: 17px;
+}
+.profileDrop a:last-child {
+  border-radius: 0px 0px 8px 8px;
+}
+.profileDrop a:first-child {
+  border-radius: 8px 8px 0px 0px;
+}
+.profileDrop a:not(:first-child) {
+  padding-top: 0px;
+}
+.profileDrop a {
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+}
 .searchContainer input {
   height: 50px;
   width: 100%;
@@ -261,6 +336,13 @@ body {
   align-items: center;
   width:100%;
 }
+.navProfileInfoContainer {
+  position:relative;
+}
+.profileDrop a {
+  display: flex;
+  flex-direction: column;
+}
 .listingsTop {
   display: flex;
   flex-direction: row;
@@ -271,7 +353,10 @@ body {
   background: white;
   padding: 25px;
   border-radius: 8px;
-  box-shadow: 0px 0px 30px -8px #d2dde8;
+  /* box-shadow: 0px 0px 30px -8px #d2dde8; */
+}
+.isStackedSwitch .listingImageContainer {
+  min-height: unset !important;
 }
 .selectContainer select {
   height: 50px;
@@ -604,15 +689,15 @@ opacity:0.25;
   border-radius: 8px;
   padding: 25px;
   color: #061649;
-  flex: 1 0 calc(18% - 10px);
+  flex: 1 0 calc(25% - 10px);
   box-sizing: border-box;
   margin-left: 25px;
   margin-top: 25px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  max-width:354px;
-  min-width:325px;
+  /* max-width:354px;
+  min-width:325px; */
 }
 .peopleBidContainer h5 {
   color: #b7c1cc;
@@ -808,9 +893,28 @@ opacity:0.25;
   margin-top: 7.5px;
 }
 .footerContainer {
-  background: #fff;
-  color: #04286aa6;
-  box-shadow: 0px 8px 30px 0px #d2dde8;
+  background: linear-gradient(to bottom, #131556 0%, #061649 100%);
+  color: #ffffff;
+}
+.footerSubContainer > div {
+  position:relative;
+  z-index:1;
+}
+.footerSubContainer {
+  position:relative;
+}
+.footerSubContainer::after {
+  content: "";
+  background: url(media/ps.svg);
+  opacity: 0.06;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: 0;
+  background-position: center center;
+  background-size: 18px;
 }
 .footerLeft img {
   width: 110px;

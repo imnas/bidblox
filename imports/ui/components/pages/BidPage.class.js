@@ -68,7 +68,7 @@ class BidPage extends Component {
 
   render() {
     const listings = [];
-    const numOfListings = 5;
+    const numOfListings = 3;
     for (var i = 0; i < numOfListings; i++) {
       listings.push(<IndividualListing key={i} {...this.state}/>);
     }
@@ -83,9 +83,9 @@ class BidPage extends Component {
               </div>
               <div className="selectContainer">
                 <select className="minimal">
-                  <option value="Fedora">Fedora</option>
+                  <option value="Latest">Latest auctions</option>
                 </select>
-                <i className="ion ion-chevron-down"/>
+                <i className="ion ion-arrow-down-b"/>
               </div>
               <div className="viewMethod">
                 <a onClick={this.gridListing} className={this.state.isStacked ? '' : 'active'}><i className="ion ion-grid"></i></a>

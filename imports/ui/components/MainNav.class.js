@@ -20,8 +20,24 @@ class MainNav extends Component {
             <div className="navProfileInfoContainer">
               <div className="userNameNavContainer">
                 <h4>Jay305</h4>
-                <i className="ion ion-chevron-down"/>
+                <i className="ion ion-arrow-down-b"/>
               </div>
+              <div className="profileDrop">
+                <ul>
+                  <NavLink activeClassName="active" to="/profile">
+                    <h4>Account</h4>
+                    <p>View and edit profile</p>
+                  </NavLink>
+                  <a>
+                    <h4>Balance</h4>
+                    <p>Purchase BIDS</p>
+                  </a>
+                </ul>
+              </div>
+            </div>
+            <div className="accountBalanceContainer">
+              <span className="accBal">84,328 <b>BIDS</b></span>
+              <a><i className="ion ion-plus-round"></i></a>
             </div>
           </div>
         </div>
