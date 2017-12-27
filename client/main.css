@@ -10,6 +10,9 @@
     box-sizing:border-box;
     font-family: 'Titillium Web', sans-serif;
 }
+button {
+  cursor:pointer;
+}
 table
 {
     border-collapse: collapse;
@@ -252,6 +255,26 @@ body {
   right: 0px;
   box-shadow: 0px 0px 30px -8px #d2dde8;
   border-radius: 8px;
+  transition-duration: 0.2s;
+  -webkit-transform: translateY(-5px);
+  -ms-transform: translateY(-5px);
+  transform: translateY(-5px);
+  opacity:0;
+}
+.hiddenMenu {
+  transition: opacity .3s,-webkit-transform .3s;
+  transition: transform .3s,opacity .3s;
+  transition: transform .3s,opacity .3s,-webkit-transform .3s;
+  will-change: transform,opacity;
+  pointer-events: none;
+  opacity: 0;
+}
+.menuSlideFadeDown {
+  -webkit-transform: translateY(0px);
+  -ms-transform: translateY(0px);
+  transform: translateY(0px);
+  opacity: 1;
+  transition-duration: 0.2s;
 }
 .accountBalanceContainer b {
   padding-left: 5px;
@@ -338,6 +361,9 @@ body {
 }
 .navProfileInfoContainer {
   position:relative;
+  flex-direction: row;
+  display: flex;
+  cursor:pointer;
 }
 .profileDrop a {
   display: flex;
@@ -696,8 +722,8 @@ opacity:0.25;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* max-width:354px;
-  min-width:325px; */
+  max-width:385px;
+  min-width:325px;
 }
 .peopleBidContainer h5 {
   color: #b7c1cc;
@@ -893,7 +919,7 @@ opacity:0.25;
   margin-top: 7.5px;
 }
 .footerContainer {
-  background: linear-gradient(to bottom, #131556 0%, #061649 100%);
+  background: linear-gradient(to bottom, #1f1562 0%, #0c154f 100%);
   color: #ffffff;
 }
 .footerSubContainer > div {
@@ -903,7 +929,7 @@ opacity:0.25;
 .footerSubContainer {
   position:relative;
 }
-.footerSubContainer::after {
+/* .footerSubContainer::after {
   content: "";
   background: url(media/ps.svg);
   opacity: 0.06;
@@ -915,7 +941,7 @@ opacity:0.25;
   z-index: 0;
   background-position: center center;
   background-size: 18px;
-}
+} */
 .footerLeft img {
   width: 110px;
 }
@@ -968,18 +994,81 @@ opacity:0.25;
     min-width:unset;
   }
 }
+.formInputContainer input {
+  background: #f6f8fa;
+  width: 100%;
+  height: 50px;
+  padding-left: 25px;
+  padding-right: 25px;
+  font-size: 16px;
+  border-radius: 8px;
+}
+.actualFormContainer {
+  background: #ffffff;
+  -webkit-box-shadow: 0 4px 24px 0 rgba(155,182,190,0.07);
+  box-shadow: 0 4px 24px 0 rgba(155,182,190,0.07);
+  border-radius: 8px;
+  max-width: 400px;
+  padding: 25px;
+  width: 100%;
+}
+.formsContainerMain {
+  height: 100%;
+  background: #f6f8fa;
+}
+.subFormContainer {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction:column;
+}
+.formInputContainer h4 {
+  color: #061649;
+  text-transform: uppercase;
+  font-size: 12px;
+  margin-bottom: 5px;
+  line-height: 11px;
+}
+.individualInputFormContainer:not(:first-child) {
+  margin-top: 15px;
+}
+.formSubmitContainer button {
+  width: 100%;
+  background: #0096f8;
+  height: 50px;
+  color: #fff;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: bold;
+}
+.formSubmitContainer {
+  margin-top: 25px;
+}
+.formSubmitContainer p a {
+  font-weight: 600;
+  color: #0096f8;
+}
 
-
-
-
-
-
-
-
-
-
-
-
+.formSubmitContainer p {
+  color: #061649;
+  text-align: center;
+  font-size: 12px;
+  margin-top: 15px;
+}
+.formHeader {
+  padding-bottom: 25px;
+  border-bottom: 1px solid #0096f8;
+  margin-bottom: 25px;
+  color: #061649;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 22px;
+}
+.formLogoContainer img {
+  width: 155px;
+  margin-bottom: 25px;
+}
 
 
 

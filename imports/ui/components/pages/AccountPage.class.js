@@ -73,7 +73,7 @@ class AccountPage extends Component {
                     <div className="gbATop">
                       <h4>Give your friends <b>100 free BIDS</b> on signup</h4>
                       <div className="affiliateInputContainer">
-                        <input value="https://bidblox.io/r/jay305"/>
+                        <input value="https://bidblox.io/r/jay305" readOnly/>
                         <a><i className="ion ion-ios-copy-outline"></i></a>
                       </div>
                     </div>
