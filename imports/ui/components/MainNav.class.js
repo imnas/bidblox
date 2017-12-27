@@ -64,6 +64,10 @@ class MainNav extends Component {
               <a><i className="ion ion-plus-round"></i></a>
             </div>
           </div>
+          <div className="notLoggedIn">
+            <a>Login</a>
+            <a>Register</a>
+          </div>
         </div>
       </div>
     </div>

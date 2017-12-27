@@ -1069,7 +1069,13 @@ opacity:0.25;
   width: 155px;
   margin-bottom: 25px;
 }
+.notLoggedIn a:not(:last-child) {
+  margin-right: 25px;
+}
 
+.notLoggedIn a {
+  font-weight: bold;
+}
 
 
 
