@@ -10,7 +10,7 @@ class Login extends Component {
     <div className="formsContainerMain">
       <div className="subFormContainer">
         <div className="formLogoContainer">
-          <img src="/media/bidblox.png"/>
+          <NavLink to="/"><img src="/media/bidblox.png"/></NavLink>
         </div>
         <div className="actualFormContainer">
           <div className="formHeader">
@@ -30,6 +30,9 @@ class Login extends Component {
               <p>By logging in, you agree to the <a>Terms & Conditions</a> as well as the <a>Privacy Policy</a></p>
             </div>
           </div>
+        </div>
+        <div className="alreadyContainerForms">
+          <NavLink to="/register">Don't have an account? <b>Register one</b></NavLink>
         </div>
       </div>
     </div>

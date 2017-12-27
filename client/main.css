@@ -1076,8 +1076,15 @@ opacity:0.25;
 .notLoggedIn a {
   font-weight: bold;
 }
-
-
+.alreadyContainerForms {
+  margin-top: 15px;
+  color: #061649;
+  font-size: 13px;
+}
+.alreadyContainerForms b {
+  color: #0096f8;
+  font-weight: 600;
+}
 
 
 

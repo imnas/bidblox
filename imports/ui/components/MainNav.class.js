@@ -65,8 +65,8 @@ class MainNav extends Component {
             </div>
           </div>
           <div className="notLoggedIn">
-            <a>Login</a>
-            <a>Register</a>
+            <NavLink to="/login" exact>Login</NavLink>
+            <NavLink to="/register" exact>Register</NavLink>
           </div>
         </div>
       </div>

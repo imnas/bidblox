@@ -10,7 +10,7 @@ class Register extends Component {
     <div className="formsContainerMain">
       <div className="subFormContainer">
         <div className="formLogoContainer">
-          <img src="/media/bidblox.png"/>
+          <NavLink to="/"><img src="/media/bidblox.png"/></NavLink>
         </div>
         <div className="actualFormContainer">
           <div className="formHeader">
@@ -34,6 +34,9 @@ class Register extends Component {
               <p>By signing up, you agree to the <a>Terms & Conditions</a> as well as the <a>Privacy Policy</a></p>
             </div>
           </div>
+        </div>
+        <div className="alreadyContainerForms">
+          <NavLink to="/login">Already have an account? <b>Login now</b></NavLink>
         </div>
       </div>
     </div>
